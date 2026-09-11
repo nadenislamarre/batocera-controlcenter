@@ -489,10 +489,12 @@ class UICore:
             else:
                 if self.window_size:
                     width, height = self.window_size
+                    max_height = height
                     scale_class = "full" if width >= 1280 and max_height >= 720 else "small"
                     sw, sh = width, height
                 else:
                     width, height = geometry.width, geometry.height
+                    max_height = height
                     sw, sh = width, height
 
                     scale_class = "small"
